@@ -1,4 +1,4 @@
-<a href="/"> Home</a><br>
+<a href="/"> Home</a><a href="/users/create"> Create</a>
 <h1>USER</h1> <br>
 <form action="/users/search" method="get">
     <input type="text" name="_name">
@@ -8,6 +8,7 @@
     <% for(var i=0; i<users.length; i++) {%>
     <li>
         <%= users[i].name %>
+        <a href="/users/<%=users[i].id%>"> View</a>
     </li>
     <% } %>
 </ul>

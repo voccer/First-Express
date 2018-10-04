@@ -6,9 +6,11 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "shortid": "^2.2.13"
   },
   "devDependencies": {
+    "lowdb": "^1.0.0",
     "nodemon": "^1.18.4"
   },
   "scripts": {
