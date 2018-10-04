@@ -1,0 +1,13 @@
+<a href="/"> Home</a><br>
+<h1>USER</h1> <br>
+<form action="/users/search" method="get">
+    <input type="text" name="_name">
+    <input type="submit" value="Search">
+</form>
+<ul>
+    <% for(var i=0; i<users.length; i++) {%>
+    <li>
+        <%= users[i].name %>
+    </li>
+    <% } %>
+</ul>
