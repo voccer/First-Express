@@ -76,6 +76,7 @@ app.post("/users/create", (req, res) => {
 });
 //
 app.get("/users/:id", (req, res) => {
+  //dinamic param sử dụng toán tử ":"
   var id = req.params.id;
   var user = db
     .get("users")
