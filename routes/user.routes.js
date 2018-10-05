@@ -5,6 +5,7 @@ var UserController = require("../controller/user.controller");
 var validate = require("../validate/user.validate");
 //
 var authMiddleware = require("../middlewares/auth.middleware");
+//
 const routes = express.Router();
 //
 routes.get("/", authMiddleware.requiredAuth, UserController.listUser);
