@@ -31,31 +31,10 @@ module.exports = {
   },
   POSTcreate: (req, res) => {
     req.body.id = shortid.generate();
-    let Err = [];
-    if (!req.body.name) {
-      Err.push("Name is required!!");
-    }
-    if (!req.body.email) {
-      Err.push("Email is required!!");
-    }
-    if (!req.body.password) {
-      Err.push("Password is required!!");
-    } else if (req.body.password.length < 5) {
-      Err.push("Password is too weak!!");
-    }
-
-    if (Err.length > 0) {
-      res.render("users/create", {
-        Err: Err,
-        Value: req.body
-      });
-      return;
-    } else {
-      db.get("users")
-        .push(req.body)
-        .write();
-      res.redirect("/users");
-    }
+    db.get("users")
+      .push(req.body)
+      .write();
+    res.redirect("/users");
   },
   getUser: (req, res) => {
     var id = req.params.id;
