@@ -1,7 +1,45 @@
-<a href="/"> Home</a><br>
-<h1>Create new Member</h1>
-<form action="/users/create" method="post">
-    <br>Name: <input type="text" name="name">
-    <br>Email: <input type="text" name="email">
-    <br><br><input type="submit" value="Create">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../layouts/head %>
+</head>
+
+<body class="container">
+    <header>
+        <% include ../layouts/header %>
+    </header>
+    <div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-9">
+                <form action="/users/create" method="post">
+                    <div class="form-group">
+                        <label>Full name</label>
+                        <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Full name">
+                        <small id="nameHelp" class="form-text text-muted">Please input real name.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" name="email" aria-describedby="nameHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <% include ../layouts/footer %>
+    </footer>
+
+</body>

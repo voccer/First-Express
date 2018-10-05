@@ -1,13 +1,29 @@
-<h1>This is the Homepage</h1>
-<h2>Hello
-    <%=name%>
-</h2>
-<br>
-<form action="/users/search" method="get">
-    <input type="text" name="_name">
-    <input type="submit" value="Search">
-</form>
-<br>
-<a href="/users">List User</a><br>
-<br>
-<a href="/users/create">Create new</a>
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ./layouts/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ./layouts/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1>This is great</h1>
+            <p>Welcome to templating using EJS</p>
+        </div>
+    </main>
+
+    <footer>
+        <% include ./layouts/footer %>
+    </footer>
+
+</body>
+
+</html>

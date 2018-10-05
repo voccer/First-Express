@@ -1,15 +1,43 @@
-<a href="/"> Home </a><a href="/users/create"> Create </a><a href="/users"> List </a><br>
-<h1>User:</h1>
-<br>
-<p>
-    Name:
-    <%=user.name%>
-</p>
-<p>
-    Email:
-    <%=user.email%>
-</p>
-<p>
-    ID:
-    <%=user.id%>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../layouts/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../layouts/header %>
+    </header>
+
+    <main>
+        <div class="jumbotron">
+            <h1>User:</h1>
+            <br>
+            <p>
+                ID:
+                <%=user.id%>
+            </p>
+            <p>
+                Name:
+                <%=user.name%>
+            </p>
+            <p>
+                Email:
+                <%=user.email%>
+            </p>
+            <p>
+                Password:
+                <%=user.password%>
+            </p>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../layouts/footer %>
+    </footer>
+
+</body>
+
+</html>

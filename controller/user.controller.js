@@ -18,11 +18,9 @@ module.exports = {
   },
   search: (req, res) => {
     var users = db.get("users").value();
-    var _name = req.query._name.toLowerCase();
+    var _name = req.query._name;
     var mathchUsers = users.filter(user => {
-      var userName = user.name.toLowerCase();
-      return userName.indexOf(_name) != -1;
-      // return user.name.toLowerCase().indexOf(q.toLowerCase()) != -1;
+      return user.name.toLowerCase().indexOf(_name.toLowerCase()) != -1;
     });
     res.render("users/index", {
       users: mathchUsers
