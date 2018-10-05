@@ -35,7 +35,7 @@ module.exports = {
     //            name: req.param("name"),
     //            email: req.param("email")}
 
-    res.redirect("/");
+    res.redirect("/users");
   },
   viewUser: (req, res) => {
     var id = req.params.id;

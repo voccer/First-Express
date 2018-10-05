@@ -13,24 +13,34 @@
 
     <main>
         <div class="jumbotron">
-            <h1>User:</h1>
+            <h1 class="text-center">USER</h1>
             <br>
-            <p>
-                ID:
-                <%=user.id%>
-            </p>
-            <p>
-                Name:
-                <%=user.name%>
-            </p>
-            <p>
-                Email:
-                <%=user.email%>
-            </p>
-            <p>
-                Password:
-                <%=user.password%>
-            </p>
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Full name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%=user.id%>
+                        </td>
+                        <td>
+                            <%=user.name%>
+                        </td>
+                        <td>
+                            <%=user.email%>
+                        </td>
+                        <td>
+                            <%=user.password%>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </main>
 
