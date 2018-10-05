@@ -27,12 +27,7 @@ module.exports = {
     });
   },
   GETcreate: (req, res) => {
-    let Err = [];
-    let Value = [];
-    res.render("users/create", {
-      Err: Err,
-      Value: Value
-    });
+    res.render("users/create");
   },
   POSTcreate: (req, res) => {
     req.body.id = shortid.generate();
@@ -45,7 +40,10 @@ module.exports = {
     }
     if (!req.body.password) {
       Err.push("Password is required!!");
+    } else if (req.body.password.length < 5) {
+      Err.push("Password is too weak!!");
     }
+
     if (Err.length > 0) {
       res.render("users/create", {
         Err: Err,
