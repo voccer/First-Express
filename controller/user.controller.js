@@ -26,18 +26,40 @@ module.exports = {
       users: mathchUsers
     });
   },
-  create: (req, res) => {
-    req.body.id = shortid.generate();
-    db.get("users")
-      .push(req.body)
-      .write();
-    // cach 2:   {id: shortid.generate(),
-    //            name: req.param("name"),
-    //            email: req.param("email")}
-
-    res.redirect("/users");
+  GETcreate: (req, res) => {
+    let Err = [];
+    let Value = [];
+    res.render("users/create", {
+      Err: Err,
+      Value: Value
+    });
   },
-  viewUser: (req, res) => {
+  POSTcreate: (req, res) => {
+    req.body.id = shortid.generate();
+    let Err = [];
+    if (!req.body.name) {
+      Err.push("Name is required!!");
+    }
+    if (!req.body.email) {
+      Err.push("Email is required!!");
+    }
+    if (!req.body.password) {
+      Err.push("Password is required!!");
+    }
+    if (Err.length > 0) {
+      res.render("users/create", {
+        Err: Err,
+        Value: req.body
+      });
+      return;
+    } else {
+      db.get("users")
+        .push(req.body)
+        .write();
+      res.redirect("/users");
+    }
+  },
+  getUser: (req, res) => {
     var id = req.params.id;
     var user = db
       .get("users")
