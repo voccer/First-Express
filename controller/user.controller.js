@@ -1,6 +1,6 @@
 var express = require("express");
 const routes = express.Router();
-
+var md5 = require("md5");
 var shortid = require("shortid");
 var db = require("../db");
 //
@@ -31,6 +31,7 @@ module.exports = {
   },
   POSTcreate: (req, res) => {
     req.body.id = shortid.generate();
+    req.body.password = md5(req.body.password);
     db.get("users")
       .push(req.body)
       .write();

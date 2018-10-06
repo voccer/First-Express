@@ -1,4 +1,5 @@
 var db = require("../db");
+var md5 = require("md5");
 module.exports = {
   POSTlogin: (req, res, next) => {
     var email = req.body.email;
@@ -14,7 +15,8 @@ module.exports = {
       });
       return;
     }
-    if (user.password !== password) {
+    var hashReq = md5(password);
+    if (user.password !== hashReq) {
       res.render("auth/login", {
         errors: [" The password uncorrect!!!"],
         Value: req.body
