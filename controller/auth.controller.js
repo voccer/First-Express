@@ -3,7 +3,7 @@ module.exports = {
     res.render("auth/login");
   },
   POSTlogin: (req, res) => {
-    res.cookie("UserID", res.locals.user.id); /// chưa dang nhập bằng cookie được
+    res.cookie("UserID", res.locals.user.id, { signed: true }); /// chưa dang nhập bằng cookie được
     res.redirect("/users");
   }
 };
