@@ -2,9 +2,6 @@ require("dotenv").config();
 const express = require("express");
 const app = express();
 var cookieParser = require("cookie-parser");
-
-//
-//
 var bodyParser = require("body-parser");
 // support parsing of application/json type post data
 app.use(bodyParser.json());
@@ -13,14 +10,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //
 app.use(cookieParser(process.env.SESSION_SECRET));
 //SESSION_SECRRET được lưu trong .env
-//
 const port = 3000;
-//
 app.set("view engine", "ejs");
 app.set("views", "./views");
 //Try cập các file static cung cấp cho địa chi tuyệt đối vd: /images/anh.png
 app.use(express.static("public"));
-//
 //
 app.get("/", (req, res) => {
   res.render("index");
