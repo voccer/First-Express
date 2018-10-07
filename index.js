@@ -1,9 +1,9 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 var cookieParser = require("cookie-parser");
 
 //
-
 //
 var bodyParser = require("body-parser");
 // support parsing of application/json type post data
@@ -11,8 +11,8 @@ app.use(bodyParser.json());
 //support parsing of application/x-www-form-urlencoded post data
 app.use(bodyParser.urlencoded({ extended: true }));
 //
-app.use(cookieParser("sajflasdjfasfsskd"));
-//
+app.use(cookieParser(process.env.SESSION_SECRET));
+//SESSION_SECRRET được lưu trong .env
 //
 const port = 3000;
 //
