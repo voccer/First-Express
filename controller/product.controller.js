@@ -15,9 +15,13 @@ module.exports = {
   },
   searchPro: (req, res) => {
     var product = db.get("product").value();
-    var namePro = req.query.namePro;
+    var searchPro = req.query.searchPro;
     var matchPro = product.filter(product => {
-      return product.namePro.toLowerCase().indexOf(namePro.toLowerCase()) != -1;
+      return (
+        product.namePro.toLowerCase().indexOf(searchPro.toLowerCase()) != -1 ||
+        product.classification.toLowerCase().indexOf(searchPro.toLowerCase()) !=
+          -1
+      );
     });
     res.render("product/index", {
       product: matchPro
