@@ -22,8 +22,10 @@ app.get("/", (req, res) => {
 //connect rountes
 var userRoute = require("./routes/user.routes");
 var authRoute = require("./routes/auth.routes");
+var productRoute = require("./routes/product.routes");
 app.use("/users", userRoute);
 app.use("/auth", authRoute);
+app.use("/product", productRoute);
 //
 app.listen(port, () => {
   console.log("Listen in  port " + port);

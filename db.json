@@ -24,5 +24,14 @@
       "password": "e10adc3949ba59abbe56e057f20f883e",
       "id": "DXFYR9mNy"
     }
+  ],
+  "product": [
+    {
+      "namePro": "xịt",
+      "price": "120",
+      "productionDate": "2018-10-03",
+      "expirationDate": "2018-10-02",
+      "id": "IdMb-JBfR"
+    }
   ]
 }

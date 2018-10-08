@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../layouts/head %>
+</head>
+
+<body class="container">
+    <header>
+        <% include ../layouts/header %>
+    </header>
+    <main>
+        <form class="form-inline my-2 my-lg-0" action="/product/search" method="get">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Product" name="namePro">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10">
+                <h1 class="text-center" style="margin: 30px 0px">List Product</h1>
+                <table class="table text-center">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for(var i=0; i<product.length; i++) {%>
+                        <tr>
+                            <th scope="row">
+                                <%=i+1%>
+                            </th>
+                            <td>
+                                <%= product[i].name %>
+                            </td>
+                            <td>
+                                <%= product[i].price %>
+                            </td>
+                            <td><a class="btn btn-outline-info" href="/product/<%=product[i].id%>"> View</a></td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+    </main>
+    <footer>
+        <% include ../layouts/footer %>
+    </footer>
+
+</body>
+
+</html>

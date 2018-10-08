@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../layouts/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../layouts/header %>
+    </header>
+    <main>
+        <div class="jumbotron">
+            <h1 class="text-center">Product</h1>
+            <br>
+            <table class="table text-center">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Production Date</th>
+                        <th scope="col">Expiration Date</th>
+                        <th scope="col">Details</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <%=product.id%>
+                        </td>
+                        <td>
+                            <%=product.name%>
+                        </td>
+                        <td>
+                            <%=product.price%>
+                        </td>
+                        <td>
+                            <%=product.productionDate%>
+                        </td>
+                        <td>
+                            <%=product.expirationDate%>
+                        </td>
+                        <td>
+                            <%=product.details%>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../layouts/footer %>
+    </footer>
+
+</body>
+
+</html>

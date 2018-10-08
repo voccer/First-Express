@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../layouts/head %>
+</head>
+
+<body class="container">
+    <header>
+        <% include ../layouts/header %>
+    </header>
+    <main>
+        <h1 class="text-center">New Product</h1>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-9">
+                <!-- <% if (locals.Err) { %>
+                <% for(var i=0; i<Err.length; i++) {%>
+                <div class="alert alert-danger" role="alert">
+                    <%= Err[i] %>
+                </div>
+                <% } %>
+                <% } %> -->
+
+                <form action="/product/create" method="post">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="namePro" placeholder="Name" value="<%=locals.Value?Value.namePro:""%>">
+                    </div>
+                    <div class="form-group">
+                        <label>Price</label>
+                        <input type="text" class="form-control" name="price" placeholder="Price" value="<%=locals.Value?Value.price:""%>">
+                    </div>
+                    <div class="form-group">
+                        <label>Production Date</label>
+                        <input type="date" class="form-control" name="productionDate">
+                    </div>
+                    <div class="form-group">
+                        <label>Expiration Date</label>
+                        <input type="date" class="form-control" name="expirationDate">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input">
+                        <label class="form-check-label">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <% include ../layouts/footer %>
+    </footer>
+
+</body>

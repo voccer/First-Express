@@ -1,11 +1,5 @@
-.header {
-  margin-bottom: 30px;
-}
 main {
-  margin-top: 60px;
-}
-.content {
-  margin-top: 50px;
+  border-top: 100px;
 }
 .content .col-10 {
   padding: 0 5%;
