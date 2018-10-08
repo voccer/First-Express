@@ -18,6 +18,7 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
+                        <th scope="col">Classification</th>
                         <th scope="col">Name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Production Date</th>
@@ -31,7 +32,10 @@
                             <%=product.id%>
                         </td>
                         <td>
-                            <%=product.name%>
+                            <%=product.classification%>
+                        </td>
+                        <td>
+                            <%=product.namePro%>
                         </td>
                         <td>
                             <%=product.price%>
