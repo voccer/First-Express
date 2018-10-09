@@ -32,6 +32,10 @@ module.exports = {
   },
   POSTcreatePro: (req, res) => {
     req.body.id = shortid.generate();
+    req.body.avatar = req.file.path
+      .split("\\")
+      .slice(1)
+      .join("/");
     db.get("product")
       .push(req.body)
       .write();

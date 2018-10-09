@@ -1,4 +1,4 @@
-var db = require("../db");
+var db = require("../config/db");
 
 module.exports = {
   requiredAuth: (req, res, next) => {

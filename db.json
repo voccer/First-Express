@@ -1207,6 +1207,84 @@
       "expirationDate": "2018-08-30",
       "details": "Reckitt Benckiser LLC",
       "id": "3586056068414596"
+    },
+    {
+      "classification": "Alfa Romeo",
+      "namePro": "ta cao canh",
+      "price": "12233",
+      "productionDate": "",
+      "expirationDate": "",
+      "details": "",
+      "id": "qgqlc8j4X"
+    },
+    {
+      "classification": "Alfa Romeo",
+      "namePro": "ta cao canh",
+      "price": "12233",
+      "productionDate": "",
+      "expirationDate": "",
+      "details": "",
+      "id": "HM1DvlHRC"
+    },
+    {
+      "classification": "Alfa Romeo",
+      "namePro": "taccc",
+      "price": "12233",
+      "productionDate": "",
+      "expirationDate": "",
+      "details": "",
+      "id": "hdR_l2q4i",
+      "avatar": ""
+    },
+    {
+      "classification": "Alfa Romeo",
+      "namePro": "cacacaa",
+      "price": "12",
+      "productionDate": "",
+      "expirationDate": "",
+      "details": "",
+      "id": "rVb-zYPKh",
+      "avatar": "uploads/9a64052ad031513b878ca195c7859a88"
+    },
+    {
+      "classification": "Alfa Romeo",
+      "namePro": "tao tao",
+      "price": "1212",
+      "productionDate": "",
+      "expirationDate": "",
+      "details": "",
+      "id": "Npf6iw8nB",
+      "avatar": "uploads/c13f07124f0a85365b7e691b5b0c3238"
+    },
+    {
+      "classification": "Alfa Romeo",
+      "namePro": "hii",
+      "price": "111",
+      "productionDate": "",
+      "expirationDate": "",
+      "details": "",
+      "id": "8ALbFKQ8J",
+      "avatar": "uploads/b0823bb38a9735dd79000422e0217692"
+    },
+    {
+      "classification": "Audi",
+      "namePro": "i8",
+      "price": "10000",
+      "productionDate": "",
+      "expirationDate": "",
+      "details": "fuite",
+      "id": "lNWHpNTXM",
+      "avatar": "uploads/1785f850018d17a8036376925a451c83"
+    },
+    {
+      "classification": "Alfa Romeo",
+      "namePro": "hiii",
+      "price": "1111",
+      "productionDate": "",
+      "expirationDate": "",
+      "details": "",
+      "id": "aGb2EWfRX",
+      "avatar": "uploads/a5e2a107962f76ff38c1204b071e91e0"
     }
   ],
   "facebook": []
