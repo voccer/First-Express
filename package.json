@@ -10,6 +10,8 @@
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "md5": "^2.2.1",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
     "shortid": "^2.2.13"
   },
   "devDependencies": {

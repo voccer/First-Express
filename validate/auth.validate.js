@@ -1,4 +1,4 @@
-var db = require("../db");
+var db = require("../config/db");
 var md5 = require("md5");
 module.exports = {
   POSTlogin: (req, res, next) => {

@@ -2,7 +2,7 @@ var express = require("express");
 const routes = express.Router();
 var md5 = require("md5");
 var shortid = require("shortid");
-var db = require("../db");
+var db = require("../config/db");
 //
 var bodyParser = require("body-parser");
 // support parsing of application/json type post data

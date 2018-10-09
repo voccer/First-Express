@@ -1,7 +1,7 @@
 var express = require("express");
 const routes = express.Router();
 var shortid = require("shortid");
-var db = require("../db");
+var db = require("../config/db");
 //
 var bodyParser = require("body-parser");
 routes.use(bodyParser.json());
